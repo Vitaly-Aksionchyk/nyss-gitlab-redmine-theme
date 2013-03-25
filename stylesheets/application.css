@@ -279,6 +279,14 @@ tr.odd.status-3{ background: #afea9f !important;}
 tr.status-3 a{ color: #1b520e !important; font-weight: normal !important;}
 tr.odd.status-3 td, tr.even.status-3 td { border-color: #7faf73; }
 
+/* Closed status  */
+tr.status-5 td a, tr.status-5 td {color:#888 !important; }
+tr.status-5 td.id {text-decoration:line-through}
+
+/* Rejected status */
+tr.status-6 td, tr.status-6 td a {color:red !important; }
+
+
 /* hover fix for resolved */
 table.list tbody tr:hover { background-color:#f9fdff !important; color: #000 !important; }
 table.list tbody tr:hover a { color: #000 !important;}
