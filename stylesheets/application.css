@@ -316,6 +316,8 @@ option {  }
 input#issue_subject { font-size: 200%; width: 90%; }
 input#issue_subject, #project_description { width: 92.5%; }
 textarea#issue_description { width: 93%;}
+input.autocomplete{padding-left:20px;height:auto;}
+
 
 /* Misc */
 #q { /* search/query input */
