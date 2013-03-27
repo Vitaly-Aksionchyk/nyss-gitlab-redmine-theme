@@ -12,8 +12,6 @@ _/    _/    _/    _/_/      _/_/_/    _/_/_/  _/    _/_/_/
 Theme:		Modula Gitlab
 Updated:	2012/10/23
 Author:		nysenate.gov
-
-
 */
 
 /*@import url(./jquery.fancybox.css)*/
@@ -232,62 +230,120 @@ table.list thead th a { color: #2e2e2e; }
 table.list thead th a:hover { color: #2e2e2e; }
 table.list tr.issue a { color: #3c3c3c; }
 
+
+table.issues tbody tr{height:40px; }
+table.issues tbody tr td{vertical-align: middle}
+table.issues tbody tr td.priority{color: transparent;}
+/*Priorities of issues*/
+/*Immediate*/
+table tbody tr.priority-7 td.checkbox{background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAFCAYAAABirU3bAAAALUlEQVQIW2O8xsDwfw07O0M4AwPDSiBmbGJn/x/y8ycDSBBEM94ECoBkiFcBACriGF0vdUXPAAAAAElFTkSuQmCC) repeat}
+table tbody tr.priority-7 td.priority{background: transparent url(priority-immediate.png) 50% 50% no-repeat}
+
+/* Urgent */
+table tbody tr.priority-6 td.checkbox{background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAFCAYAAABirU3bAAAAI0lEQVQIW2M82dHxn7eiguFzRwcDiGa8xsDwH8YB0YykqwAA1MQiNXFOnvMAAAAASUVORK5CYII=) repeat}
+table tbody tr.priority-6 td.priority{background: transparent url(priority-urgent.png) 50% 50% no-repeat}
+
+/* High */
+table tbody tr.priority-5 td.checkbox{background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAFCAYAAABirU3bAAAAI0lEQVQIW2P8lJv7/7q0NIPm06cMIJrxZEfHfxgHRDOSrgIAM9skJMRBATYAAAAASUVORK5CYII=) repeat}
+table tbody tr.priority-5 td.priority{background: transparent url(priority-high.png) 50% 50% no-repeat}
+
+/*Normal*/
+table tbody tr.priority-4 td.checkbox{background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAFCAYAAABirU3bAAAAI0lEQVQIW2O0K1/x38DGg+HCkR0MIJoxb/OH/zAOiGYkXQUA9hci7lN3INwAAAAASUVORK5CYII=) repeat}
+table tbody tr.priority-4 td.priority{background: transparent url(priority-normal.png) 50% 50% no-repeat}
+
+/* Low */
+table tbody tr.priority-3 td.checkbox{background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAFCAYAAABirU3bAAAAIklEQVQIW2NsX3noP+O7hwz/heQZQDRjx/TF/2EcME26CgBbhiUrCe7cxgAAAABJRU5ErkJggg==) repeat}
+table tbody tr.priority-3 td.priority{background: transparent url(priority-low.png) 50% 50% no-repeat}
+
+
+/* Statuses */
+
+/* In progress */
+table tbody tr.status-2{background: #faf6ab}
+table tbody tr.even.status-2{background: #fbf9d0}
+
+/*Resolved*/
+table tbody tr.status-3, table tbody tr.status-7{background: #eef7e4;color: darkgreen}
+table tbody tr.status-3 a{color: darkgreen !important;}
+table tbody tr.even.status-3, table tbody tr.even.status-7{background: #f6ffed}
+
+/* Feedback */
+table tbody tr.status-4{background: #d6e2ed}
+table tbody tr.even.status-4{background: #ecf4fb}
+
+/* Closed */
+table tbody tr.status-5 td.priority{color: transparent !important;}
+table tbody tr.status-5 td.id a{color:#999 !important; text-decoration: line-through}
+table tbody tr.status-5 td, table tbody tr.status-5 td a {color:#999 !important; }
+table tbody tr.status-5 td.id a{color:#999 !important; text-decoration: line-through}
+
+/* Rejected */
+table tbody tr.status-6 td.priority{color: transparent !important;}
+table tbody tr.status-6 td, table tbody tr.status-6 td a {color:red !important; }
+
+
+/*Verified*/
+table tbody tr.status-7, table tbody tr.status-7 a{color: darkgreen !important;font-weight: bold;}
+
+
+
+
 /* Issues grid styles by priorities by Stefan Crain */
 /* These issues priority-N's have changed in http://www.redmine.org/issues/2071 */
 
 /* immediate */
-tr.odd.priority-7, table.list tbody tr.odd.priority-7:hover { color: #fff; font-weight: bold; }
-tr.odd.priority-7 { background: #9b4842; }
-tr.even.priority-7, table.list tbody tr.even.priority-7:hover { color: #fff; font-weight: bold; }
-tr.even.priority-7 { background: #a4443c; }
-tr.priority-7 a, tr.priority-7:hover a { color: #fff !important; }
-tr.odd.priority-7 td, tr.even.priority-7 td { border-color: #970d00; }
+/*tr.odd.priority-7, table.list tbody tr.odd.priority-7:hover { color: #fff; font-weight: bold; }*/
+/*tr.odd.priority-7 { background: #9b4842; }*/
+/*tr.even.priority-7, table.list tbody tr.even.priority-7:hover { color: #fff; font-weight: bold; }*/
+/*tr.even.priority-7 { background: #a4443c; }*/
+/*tr.priority-7 a, tr.priority-7:hover a { color: #fff !important; }*/
+/*tr.odd.priority-7 td, tr.even.priority-7 td { border-color: #970d00; }*/
 
 /* urgent */
-tr.odd.priority-6, table.list tbody tr.odd.priority-6:hover { color: #000; font-weight: bold; }
-tr.odd.priority-6 { background: #f9776d; }
-tr.even.priority-6, table.list tbody tr.even.priority-6:hover { color: #000; font-weight: bold; }
-tr.even.priority-6 { background: #ff6d5c; }
-tr.priority-6 a, tr.priority-6:hover a { color: #000; }
-tr.odd.priority-6 td, tr.even.priority-6 td { border-color: #d1413c; }
+/*tr.odd.priority-6, table.list tbody tr.odd.priority-6:hover { color: #000; font-weight: bold; }*/
+/*tr.odd.priority-6 { background: #f9776d; }*/
+/*tr.even.priority-6, table.list tbody tr.even.priority-6:hover { color: #000; font-weight: bold; }*/
+/*tr.even.priority-6 { background: #ff6d5c; }*/
+/*tr.priority-6 a, tr.priority-6:hover a { color: #000; }*/
+/*tr.odd.priority-6 td, tr.even.priority-6 td { border-color: #d1413c; }*/
 
 /* high */
-tr.odd.priority-5, table.list tbody tr.odd.priority-5:hover { color: #000; font-weight: bold; }
-tr.odd.priority-5 { background: #ffad89; }
-tr.even.priority-5, table.list tbody tr.even.priority-5:hover { color: #000; font-weight: bold; }
-tr.even.priority-5 { background: #ffac75; }
-tr.priority-5 a, tr.priority-5:hover a { color: #000; }
-tr.odd.priority-5 td, tr.even.priority-5 td { border-color: #e16638; }
+/*tr.odd.priority-5, table.list tbody tr.odd.priority-5:hover { color: #000; font-weight: bold; }*/
+/*tr.odd.priority-5 { background: #ffad89; }*/
+/*tr.even.priority-5, table.list tbody tr.even.priority-5:hover { color: #000; font-weight: bold; }*/
+/*tr.even.priority-5 { background: #ffac75; }*/
+/*tr.priority-5 a, tr.priority-5:hover a { color: #000; }*/
+/*tr.odd.priority-5 td, tr.even.priority-5 td { border-color: #e16638; }*/
 
 /* normal */
-tr.odd.priority-4, table.list tbody tr.odd.priority-4:hover { color: #805504; }
-tr.odd.priority-4 { background: #fdf9d4; }
-tr.even.priority-4, table.list tbody tr.even.priority-4:hover { color: #805504; }
-tr.even.priority-4 { background: #fbf5c0; }
-tr.priority-4 a { color: #805504; }
-tr.odd.priority-4 td, tr.even.priority-4 td { border-color: #c58100; }
+/*tr.odd.priority-4, table.list tbody tr.odd.priority-4:hover { color: #805504; }*/
+/*tr.odd.priority-4 { background: #fdf9d4; }*/
+/*tr.even.priority-4, table.list tbody tr.even.priority-4:hover { color: #805504; }*/
+/*tr.even.priority-4 { background: #fbf5c0; }*/
+/*tr.priority-4 a { color: #805504; }*/
+/*tr.odd.priority-4 td, tr.even.priority-4 td { border-color: #c58100; }*/
 
 /* low */
-tr.odd.priority-3, table.list tbody tr.odd.priority-3:hover { color: #000; }
-tr.odd.priority-3 { background: #fffef2; }
-tr.even.priority-3, table.list tbody tr.even.priority-3:hover { color: #000; }
-tr.even.priority-3 { background: #f9f7e4; }
-tr.priority-3 a { color: #000; }
-tr.odd.priority-3 td, tr.even.priority-3 td { border-color: #ffa700; }
+/*tr.odd.priority-3, table.list tbody tr.odd.priority-3:hover { color: #000; }*/
+/*tr.odd.priority-3 { background: #fffef2; }*/
+/*tr.even.priority-3, table.list tbody tr.even.priority-3:hover { color: #000; }*/
+/*tr.even.priority-3 { background: #f9f7e4; }*/
+/*tr.priority-3 a { color: #000; }*/
+/*tr.odd.priority-3 td, tr.even.priority-3 td { border-color: #ffa700; }*/
 
 /* resolved status */
-tr.status-3{ color: #1b520e !important; font-weight: normal !important; }
-tr.even.status-3{ background: #bbf4ab !important;}
-tr.odd.status-3{ background: #afea9f !important;}
-tr.status-3 a{ color: #1b520e !important; font-weight: normal !important;}
-tr.odd.status-3 td, tr.even.status-3 td { border-color: #7faf73; }
+/*tr.status-3{ color: #1b520e !important; font-weight: normal !important; }*/
+/*tr.even.status-3{ background: #bbf4ab !important;}*/
+/*tr.odd.status-3{ background: #afea9f !important;}*/
+/*tr.status-3 a{ color: #1b520e !important; font-weight: normal !important;}*/
+/*tr.odd.status-3 td, tr.even.status-3 td { border-color: #7faf73; }*/
 
 /* Closed status  */
-tr.status-5 td a, tr.status-5 td {color:#888 !important; }
-tr.status-5 td.id {text-decoration:line-through}
+/*tr.status-5 td a, tr.status-5 td {color:#888 !important; }*/
+/*tr.status-5 td.id {text-decoration:line-through}*/
 
 /* Rejected status */
-tr.status-6 td, tr.status-6 td a {color:red !important; }
+/*tr.status-6 td, tr.status-6 td a {color:red !important; }*/
 
 
 /* hover fix for resolved */
